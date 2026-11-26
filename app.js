@@ -107,7 +107,9 @@ function emblem(reg) {
     stad: '<path d="M28 86V40h8v-8h8v8h12v-8h8v8h8v46z" ' + s + '/><path d="M44 86V68a6 6 0 0 1 12 0v18" ' + s + '/><path d="M50 32V16l10 4-10 4" ' + s + '/>',
     musel: '<g fill="currentColor"><circle cx="42" cy="44" r="7"/><circle cx="58" cy="44" r="7"/><circle cx="50" cy="56" r="7"/><circle cx="36" cy="58" r="6"/><circle cx="64" cy="58" r="6"/><circle cx="43" cy="70" r="6"/><circle cx="57" cy="70" r="6"/><circle cx="50" cy="82" r="5.5"/></g><path d="M50 36V20M50 26q12-10 22-4" ' + s + '/>',
     mellerdall: '<path d="M16 84l12-34 10 8 8-26 14 20 8-10 16 42z" ' + s + '/><path d="M30 70h12M56 64h10" ' + s + '/>',
-    eislek: '<path d="M30 20l-16 30h10l-12 22h36l-12-22h10zM70 28l-14 26h9l-11 20h32l-11-20h9z" ' + s + '/><path d="M30 72v14M70 74v12" ' + s + '/>'
+    eislek: '<path d="M30 20l-16 30h10l-12 22h36l-12-22h10zM70 28l-14 26h9l-11 20h32l-11-20h9z" ' + s + '/><path d="M30 72v14M70 74v12" ' + s + '/>',
+    guttland: '<path d="M50 88V30" ' + s + '/><path d="M50 34q-12-4-12-16 12 2 12 16zM50 34q12-4 12-16-12 2-12 16zM50 52q-14-4-14-16 14 2 14 16zM50 52q14-4 14-16-14 2-14 16zM50 70q-14-4-14-16 14 2 14 16zM50 70q14-4 14-16-14 2-14 16z" ' + s + '/>',
+    sauer: '<path d="M22 44h56M30 44V28h10v8h20v-8h10v16M44 44V34h12v10" ' + s + '/><path d="M14 64q9-8 18 0t18 0 18 0 18 0M14 80q9-8 18 0t18 0 18 0 18 0" ' + s + '/>'
   }[reg] || '';
   return '<svg viewBox="0 0 100 100" aria-hidden="true">' + e + '</svg>';
 }
@@ -220,9 +222,10 @@ const REGIONS = {
   mellerdall: '118,96 200,96 200,136 156,136 132,132 108,118 96,110',
   musel: '156,136 200,136 200,260 124,260 126,236 130,212 140,186 148,160',
   minett: '0,180 40,184 66,196 92,200 108,196 122,198 128,214 124,236 124,260 0,260',
-  stad: '0,114 60,113 96,110 108,118 132,132 156,136 148,160 140,186 130,212 128,214 122,198 108,196 92,200 66,196 40,184 0,180'
+  stad: '0,114 60,113 96,110 108,118 132,132 156,136 148,160 140,186 130,212 128,214 122,198 108,196 92,200 66,196 40,184 0,180',
+  guttland: '0,114 60,113 96,110 108,118 132,132 156,136 152,147 0,147'
 };
-const RNAMES = [['eislek', 'ÉISLEK', 62, 62, 0], ['mellerdall', 'MËLLERDALL', 134, 108, -8], ['musel', 'MUSEL', 157, 196, -72], ['minett', 'MINETT', 64, 234, 0], ['stad', "D'STAD", 92, 136, 0]];
+const RNAMES = [['eislek', 'ÉISLEK', 62, 62, 0], ['mellerdall', 'MËLLERDALL', 134, 108, -8], ['musel', 'MUSEL', 157, 196, -72], ['minett', 'MINETT', 64, 234, 0], ['stad', "D'STAD", 96, 170, 0], ['guttland', 'GUTTLAND', 66, 124, 0]];
 function mapLabels(ci) {
   const nodes = LESSONS.map(L => ({x: L.carte[0], y: L.carte[1]})), boxes = [], out = [];
   const hit = (a, b) => a.x1 < b.x2 && a.x2 > b.x1 && a.y1 < b.y2 && a.y2 > b.y1;
@@ -245,6 +248,7 @@ function mapSvg() {
   const ci = curIdx(), labels = mapLabels(ci);
   let route = '';
   for (let i = 1; i < LESSONS.length; i++) {
+    if (LESSONS[i].unite !== LESSONS[i - 1].unite) continue;   // un tracé par région, sans traverser la carte
     const a = LESSONS[i - 1].carte, b = LESSONS[i].carte, done = S.done[LESSONS[i - 1].id] && (S.done[LESSONS[i].id] || i === ci);
     route += '<line class="route' + (done ? ' done' : '') + '" x1="' + a[0] + '" y1="' + a[1] + '" x2="' + b[0] + '" y2="' + b[1] + '"/>';
   }
@@ -256,7 +260,8 @@ function mapSvg() {
     pat('musel', '<circle cx="3" cy="3" r="1.1" fill="C" opacity=".55"/><circle cx="7" cy="3" r="1.1" fill="C" opacity=".55"/>', REG.musel, 10) +
     pat('eislek', '<path d="M6 2l3 6H3z" fill="C" opacity=".45"/>', REG.eislek, 12) +
     pat('mellerdall', '<path d="M2 9l3-4 2 2 3-4 2 6z" fill="C" opacity=".35"/>', REG.mellerdall, 14) +
-    pat('stad', '<circle cx="5" cy="5" r=".7" fill="C" opacity=".4"/>', REG.stad, 10) + '</defs>';
+    pat('stad', '<circle cx="5" cy="5" r=".7" fill="C" opacity=".4"/>', REG.stad, 10) +
+    pat('guttland', '<path d="M2 8q2-4 4 0M8 4q2-4 4 0" stroke="C" stroke-width=".8" fill="none" opacity=".5"/>', REG.guttland, 12) + '</defs>';
   const soon = (P.communes_a_venir || []).map(c => '<g class="soon"><circle cx="' + c.carte[0] + '" cy="' + c.carte[1] + '" r="5"/><text x="' + c.carte[0] + '" y="' + (c.carte[1] + 11) + '">' + esc(c.commune) + '</text></g>').join('');
   const nodes = LESSONS.map((L, i) => {
     const [x, y] = L.carte, d = S.done[L.id], lk = locked(L), cur = i === ci;
@@ -644,7 +649,7 @@ $('logoLion').innerHTML = lion('happy');
 fetch('lessons.json').then(r => { if (!r.ok) throw 0; return r.json(); }).then(data => {
   P = data; G = P.grammaire || {};
   P.unites.forEach(u => { REG[u.id] = u.couleur; u.lecons.forEach(l => { l.unite = u; l.idx = LESSONS.length; LESSONS.push(l); }); });
-  ['minett', 'stad', 'musel', 'mellerdall', 'eislek'].forEach(k => { REG[k] = REG[k] || '#8899aa'; });
+  ['minett', 'stad', 'musel', 'mellerdall', 'eislek', 'guttland', 'sauer'].forEach(k => { REG[k] = REG[k] || '#8899aa'; });
   LESSONS.forEach(l => l.items.forEach(it => { it.key = l.id + '|' + it.lu; it.lecon = l; IDX[it.key] = it; }));
   daily();
   if (!S.onb) onboarding(0); else go('carte');

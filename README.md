@@ -2,7 +2,7 @@
 
 Appli pour apprendre le luxembourgeois depuis le français, à installer sur l'écran d'accueil du téléphone. Elle fonctionne **sans réseau**.
 
-Le guide est le **Léiw**, le lion rouge couronné des armoiries. Le parcours traverse 5 régions (Minett, D'Stad, Musel, Mëllerdall, Éislek) et 20 communes. Chaque commune terminée donne un tampon dans le **Pass**.
+Le guide est le **Léiw**, le lion rouge couronné des armoiries. Le parcours traverse 7 régions (Minett, D'Stad, Musel, Mëllerdall, Éislek, Guttland, Sauer an Our) et 28 communes, du niveau A1 au niveau A2. Chaque commune terminée donne un tampon dans le **Pass**.
 
 Adresse : https://axelll57.github.io/luxo/
 
