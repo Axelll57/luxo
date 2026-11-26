@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Luxo</title>
 <meta name="description" content="Apprendre le luxembourgeois depuis le français, même hors ligne.">
-<meta name="theme-color" content="#00a3e0">
-<!-- iPhone : permet l'ouverture en plein écran depuis l'écran d'accueil -->
+<meta name="theme-color" content="#fbf6ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f171f" media="(prefers-color-scheme: dark)">
+<!-- iPhone : ouverture en plein écran depuis l'écran d'accueil -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Luxo">
@@ -17,17 +18,25 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top">
-  <button class="logo" data-go="home" aria-label="Accueil"><img src="icons/icon-192.png" alt="">Luxo</button>
-  <span class="chip streak" title="Série de jours"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 4 6 6 6 12a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-4-1-6 1-9z" fill="#ff9600"/><path d="M12 13c1 2 3 3 3 5a3 3 0 0 1-6 0c0-1.5 1-2.5 3-5z" fill="#ffd34d"/></svg><b id="sStreak">0</b></span>
-  <span class="chip" title="XP"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="#00a3e0"/></svg><b id="sXp">0</b></span>
+<div class="flagband" aria-hidden="true"></div>
+<header class="top" id="top">
+  <button class="logo" data-tab="carte" aria-label="Accueil"><span id="logoLion"></span>Luxo</button>
+  <span class="chip" title="Série de jours"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 4 6 6 6 12a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-4-1-6 1-9z" fill="#ff8a00"/><path d="M12 13c1 2 3 3 3 5a3 3 0 0 1-6 0c0-1.5 1-2.5 3-5z" fill="#ffd34d"/></svg><b id="sStreak">0</b></span>
+  <span class="chip" title="XP"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="#1f8ad6"/></svg><b id="sXp">0</b></span>
   <span class="chip" title="Cœurs du jour"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6-8 11-8 11z" fill="#ef3340"/></svg><b id="sLives">5</b></span>
-  <button class="menu" id="mBtn" aria-label="Options">⋯</button>
+  <button class="avatar" id="meBtn" aria-label="Mon profil et réglages"><span id="lvlBadge">1</span></button>
 </header>
-<div id="update" class="update" hidden><span>Nouvelle version disponible</span><button id="updBtn">Mettre à jour</button></div>
+<div id="update" class="update" hidden><span>Nouvelle version de Luxo disponible</span><button id="updBtn">Mettre à jour</button></div>
 <main id="app"><p class="loading">Chargement…</p></main>
+<nav class="tabbar" id="tabbar" aria-label="Navigation">
+  <button data-tab="carte"><svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zm0 2.2 6 2v11.6l-6-2V6.2z"/></svg>Carte</button>
+  <button data-tab="reviser"><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 7.5 5.2l-1.9.7A6 6 0 1 1 12 6v3l4-4-4-4v3z"/></svg>Réviser<i id="dueDot" hidden></i></button>
+  <button data-tab="pass"><svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm6 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm-4 11v2h8v-2H8z"/></svg>Pass</button>
+  <button data-tab="guide"><svg viewBox="0 0 24 24"><path d="M5 3h9l5 5v13H5V3zm8 1.5V9h4.5L13 4.5zM8 12v2h8v-2H8zm0 4v2h8v-2H8z"/></svg>Guide</button>
+</nav>
 <div class="sheet-bg" id="sheetBg" hidden></div>
 <section class="sheet" id="sheet" hidden aria-live="polite"></section>
+<canvas id="confetti" aria-hidden="true"></canvas>
 <div class="toast" id="toast" role="status"></div>
 <script src="app.js"></script>
 </body>
