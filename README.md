@@ -35,6 +35,8 @@ Adresse : https://axelll57.github.io/luxo/
 
 ## Publier une mise à jour
 
+> **Important :** le site est publié depuis la branche **`gh-pages`**. Fais tes modifications sur cette branche (menu déroulant de branche en haut à gauche sur GitHub), ou recopie-les de `main` vers `gh-pages`. Une modification faite seulement sur `main` n'apparaîtra pas sur le téléphone.
+
 1. Ouvre `sw.js`, change la ligne `const VERSION = '1.0.0';` (ex. `'1.0.1'`) et enregistre (« Commit changes »).
 2. Attends 1 à 2 minutes que GitHub Pages republie.
 3. Sur le téléphone, ouvre Luxo avec du réseau : un bandeau jaune « Nouvelle version disponible » apparaît. Touche « Mettre à jour ».
