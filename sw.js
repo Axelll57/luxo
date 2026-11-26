@@ -5,7 +5,7 @@
    >>> Pour publier une mise à jour (nouvelles leçons, correction…),
    >>> augmente VERSION ci-dessous. C'est ce changement qui prévient
    >>> le téléphone qu'il y a du nouveau.                                  */
-const VERSION = '1.0.0';
+const VERSION = '2.0.0';
 const CACHE = 'luxo-' + VERSION;
 const FILES = [
   './',

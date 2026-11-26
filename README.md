@@ -2,6 +2,8 @@
 
 Appli pour apprendre le luxembourgeois depuis le français, à installer sur l'écran d'accueil du téléphone. Elle fonctionne **sans réseau**.
 
+Le guide est le **Léiw**, le lion rouge couronné des armoiries. Le parcours traverse 5 régions (Minett, D'Stad, Musel, Mëllerdall, Éislek) et 20 communes. Chaque commune terminée donne un tampon dans le **Pass**.
+
 Adresse : https://axelll57.github.io/luxo/
 
 ## Les fichiers, et à quoi ils servent
@@ -19,18 +21,20 @@ Adresse : https://axelll57.github.io/luxo/
 ## Ajouter des leçons
 
 1. Ouvre `lessons.json` sur GitHub et clique sur le crayon (Modifier).
-2. Dans une unité, ajoute une leçon dans `"lecons"` :
+2. Dans une région (`"unites"`), ajoute une leçon dans `"lecons"` :
    ```json
-   {"id": "T11", "commune": "Réimech", "commune_fr": "Remich", "carte": [136, 204], "etiquette": "droite", "theme": "Au travail", "items": [
+   {"id": "T21", "commune": "Veianen", "commune_fr": "Vianden", "carte": [114, 78], "theme": "Au château", "items": [
      {"t": "w", "fr": "la réunion", "lu": "d'Reunioun", "g": "art"},
      {"t": "s", "fr": "Je suis au bureau.", "lu": "Ech sinn am Büro.", "g": "dativ"}
    ]}
    ```
    - `id` : unique, ne le change jamais ensuite (la répétition espacée s'en sert pour suivre chaque mot).
-   - `carte` : position sur le dessin de la carte (x de 20 à 165, y de 15 à 235). `etiquette` : `bas`, `gauche` ou `droite`.
+   - `carte` : position sur le dessin de la carte (x de 20 à 165, y de 15 à 235). Garde au moins 22 d'écart avec les autres communes : le nom se place tout seul.
    - `t` : `"w"` pour un mot, `"s"` pour une phrase. Mets au moins 4 mots et 8 phrases.
    - Facultatif : `alt` (autres réponses acceptées), `afr` (autres traductions françaises), `n` (note), `g` (clé de grammaire), `gap` (mot à cacher), `v: 1` (forme à vérifier sur lod.lu).
 3. Si la commune figurait dans `communes_a_venir`, retire-la de cette liste.
+   - Nouvelle région ? Ajoute un objet dans `"unites"` avec `id`, `nom`, `sous_titre`, `niveau`, `couleur` et `lecons`.
+   - Les notes de grammaire (`"grammaire"`) ont un `titre` et un `texte`. Une leçon y renvoie par sa clé `g`.
 4. **Publie une nouvelle version** (section suivante), sinon le téléphone garde l'ancienne copie.
 
 ## Publier une mise à jour
