@@ -1,5 +1,5 @@
 {
- "version_contenu": 2,
+ "version_contenu": 3,
  "objectif_journalier": 50,
  "grammaire": {
   "eifel": {"titre": "La règle du n", "texte": "Règle du n (Eifeler Regel) : le -n final tombe devant une consonne, SAUF devant n, d, t, z, h et devant une voyelle. Ex. « Gudden Owend » (voyelle : n gardé) mais « Gudde Moien » (M : n supprimé)."},
@@ -23,7 +23,12 @@
   "passe": {"titre": "Le passé composé", "texte": "Passé composé : hunn ou sinn + participe à la FIN de la phrase. On utilise sinn pour les déplacements (goen → gaangen, kommen → komm). Participes utiles : schaffen → geschafft, iessen → giess, drénken → gedronk, schlofen → geschlof, maachen → gemaach, kafen → kaaft."},
   "modal": {"titre": "Les verbes modaux", "texte": "Verbes modaux (kënnen, mussen, wëllen, dierfen, sollen) : le modal se conjugue en 2e position et l'infinitif part à la fin : « Ech muss haut schaffen ». ech kann / du kanns · ech muss / du muss · ech wëll / du wëlls."},
   "noms": {"titre": "L'article devant les prénoms", "texte": "En luxembourgeois, on met l'article devant les prénoms : den Axel, d'Marie. Ça paraît bizarre au début, mais c'est la norme à l'oral comme à l'écrit."},
-  "imper": {"titre": "L'impératif", "texte": "Impératif : on prend le radical du verbe. huelen → « Huel ! » (prends), avec Dir : « Huelt ! ». Pour mathuelen (emporter), la particule va à la fin : « Huel e Prabbeli mat ! »."}
+  "imper": {"titre": "L'impératif", "texte": "Impératif : on prend le radical du verbe. huelen → « Huel ! » (prends), avec Dir : « Huelt ! ». Pour mathuelen (emporter), la particule va à la fin : « Huel e Prabbeli mat ! »."},
+  "futur": {"titre": "Parler du futur", "texte": "Le plus souvent, on garde le présent avec un mot de temps : « Muer fueren ech op Lëtzebuerg ». On peut aussi utiliser wäert + infinitif à la fin : « Et wäert reenen » (il va pleuvoir)."},
+  "comparatif": {"titre": "Comparer", "texte": "Plus … que : méi + adjectif + wéi (« méi kleng wéi Frankräich »). Le meilleur : am beschten. Préférer : verbe + léiwer (« Ech drénke léiwer Téi »)."},
+  "datt": {"titre": "« datt » et « well » : verbe à la fin", "texte": "Après datt (que) et well (parce que), le verbe conjugué part à la FIN de la phrase : « Ech mengen, datt dat eng gutt Iddi ass » · « well ech krank sinn »."},
+  "temps": {"titre": "Les moments de la journée", "texte": "moies (le matin), mëttes (à midi), owes (le soir), nuets (la nuit) : sans majuscule, ils indiquent un moment ou une habitude. « Haut de Moien » = ce matin."},
+  "mois": {"titre": "Mois et saisons", "texte": "« am » + mois ou saison : am Dezember, am Summer, am Wanter. Les saisons : Fréijoer, Summer, Hierscht, Wanter."}
  },
  "unites": [
   {"id": "minett", "nom": "Minett", "sous_titre": "Premiers mots", "niveau": "A1", "couleur": "#d4572e", "intro": "Le Minett, c'est le sud minier, la terre rouge du fer. Tu y poses les bases : saluer, te présenter, compter, l'heure, le café.", "lecons": [
@@ -391,9 +396,159 @@
     {"t": "s", "fr": "Je suis dans le train, la connexion est mauvaise.", "lu": "Ech sinn am Zuch, d'Verbindung ass schlecht.", "g": "dativ", "afr": ["je suis dans le train, ca coupe"]},
     {"t": "s", "fr": "À tout à l'heure !", "lu": "Bis herno!", "afr": ["a plus tard", "a tout a l'heure"]}
    ]}
+  ]},
+  {"id": "guttland", "nom": "Guttland", "sous_titre": "Vivre, travailler, donner son avis", "niveau": "A2", "couleur": "#6f8f1f", "lecons": [
+   {"id": "T21", "commune": "Miersch", "commune_fr": "Mersch", "carte": [88, 128], "theme": "Mois, dates et agenda", "items": [
+    {"t": "w", "fr": "janvier", "lu": "Januar", "g": "mois"},
+    {"t": "w", "fr": "mars", "lu": "Mäerz", "g": "mois"},
+    {"t": "w", "fr": "avril", "lu": "Abrëll", "g": "mois"},
+    {"t": "w", "fr": "mai", "lu": "Mee", "g": "mois"},
+    {"t": "w", "fr": "août", "lu": "August", "g": "mois"},
+    {"t": "w", "fr": "décembre", "lu": "Dezember", "g": "mois"},
+    {"t": "w", "fr": "la semaine", "lu": "d'Woch", "g": "art"},
+    {"t": "w", "fr": "le mois", "lu": "de Mount", "g": "art"},
+    {"t": "w", "fr": "l'année", "lu": "d'Joer", "g": "art"},
+    {"t": "s", "fr": "Mon anniversaire est en décembre.", "lu": "Mäi Gebuertsdag ass am Dezember.", "g": "mois"},
+    {"t": "s", "fr": "Quand est ton anniversaire ?", "lu": "Wéini ass däi Gebuertsdag?", "afr": ["c'est quand ton anniversaire"]},
+    {"t": "s", "fr": "La semaine prochaine, je suis en congé.", "lu": "Déi nächst Woch sinn ech a Congé.", "g": "v2", "afr": ["je suis en conge la semaine prochaine"]},
+    {"t": "s", "fr": "L'année dernière, j'étais au Japon.", "lu": "Lescht Joer war ech a Japan.", "g": "v2", "afr": ["l'annee derniere j'etais au japon", "l'an dernier j'etais au japon"]},
+    {"t": "s", "fr": "En été, il fait chaud.", "lu": "Am Summer ass et waarm.", "g": "mois", "afr": ["il fait chaud en ete"]},
+    {"t": "s", "fr": "En hiver, il neige souvent.", "lu": "Am Wanter schneit et dacks.", "g": "mois", "afr": ["il neige souvent en hiver"]},
+    {"t": "s", "fr": "Il y a deux semaines, j'étais malade.", "lu": "Virun zwou Woche war ech krank.", "g": "eifel", "afr": ["j'etais malade il y a deux semaines"]},
+    {"t": "s", "fr": "Le rendez-vous est lundi prochain.", "lu": "De Rendez-vous ass nächste Méindeg.", "v": 1},
+    {"t": "s", "fr": "Le mois prochain, je déménage.", "lu": "Nächste Mount plënneren ech.", "g": "v2", "v": 1, "afr": ["je demenage le mois prochain"]},
+    {"t": "s", "fr": "Quelle est la date aujourd'hui ?", "lu": "De Wéivilten ass haut?", "v": 1, "afr": ["on est le combien aujourd'hui", "quel jour sommes-nous"]}
+   ]},
+   {"id": "T22", "commune": "Jonglënster", "commune_fr": "Junglinster", "carte": [124, 140], "theme": "Au travail : collègues et clients", "items": [
+    {"t": "w", "fr": "le chef", "lu": "de Chef", "g": "art"},
+    {"t": "w", "fr": "le client", "lu": "de Client", "g": "art"},
+    {"t": "w", "fr": "le projet", "lu": "de Projet", "g": "art"},
+    {"t": "w", "fr": "la facture", "lu": "d'Rechnung", "g": "art"},
+    {"t": "w", "fr": "l'ordinateur", "lu": "de Computer", "g": "art"},
+    {"t": "w", "fr": "le congé", "lu": "de Congé", "g": "art"},
+    {"t": "s", "fr": "Je travaille ici depuis un an.", "lu": "Ech schaffen zënter engem Joer hei.", "g": "dativ", "afr": ["je travaille ici depuis 1 an"]},
+    {"t": "s", "fr": "Pouvez-vous m'envoyer la facture ?", "lu": "Kënnt Dir mir d'Rechnung schécken?", "g": "modal", "afr": ["vous pouvez m'envoyer la facture"]},
+    {"t": "s", "fr": "La réunion est reportée.", "lu": "D'Reunioun ass verluecht.", "v": 1},
+    {"t": "s", "fr": "J'ai beaucoup de travail cette semaine.", "lu": "Ech hunn dës Woch vill Aarbecht.", "g": "hunn"},
+    {"t": "s", "fr": "Je suis en télétravail aujourd'hui.", "lu": "Ech sinn haut am Homeoffice.", "afr": ["aujourd'hui je suis en teletravail"]},
+    {"t": "s", "fr": "Le client a appelé.", "lu": "De Client huet ugeruff.", "g": "passe"},
+    {"t": "s", "fr": "Je vous réponds demain.", "lu": "Ech äntweren Iech muer.", "g": "dudir"},
+    {"t": "s", "fr": "Avez-vous cinq minutes ?", "lu": "Hutt Dir fënnef Minutten?", "g": "dudir", "afr": ["vous avez cinq minutes", "vous avez 5 minutes"]},
+    {"t": "s", "fr": "Le projet est terminé.", "lu": "De Projet ass fäerdeg.", "afr": ["le projet est fini"]},
+    {"t": "s", "fr": "Je prends congé vendredi.", "lu": "Ech huele Freideg Congé.", "g": "eifel", "v": 1}
+   ]},
+   {"id": "T23", "commune": "Mamer", "commune_fr": "Mamer", "carte": [52, 158], "theme": "Projets et futur", "items": [
+    {"t": "w", "fr": "le voyage", "lu": "d'Rees", "g": "art"},
+    {"t": "w", "fr": "les vacances", "lu": "d'Vakanz", "g": "art"},
+    {"t": "w", "fr": "le plan", "lu": "de Plang", "g": "art"},
+    {"t": "w", "fr": "bientôt", "lu": "geschwënn"},
+    {"t": "w", "fr": "réserver", "lu": "reservéieren"},
+    {"t": "w", "fr": "rester", "lu": "bleiwen"},
+    {"t": "s", "fr": "Demain, je vais à Luxembourg.", "lu": "Muer fueren ech op Lëtzebuerg.", "g": "futur"},
+    {"t": "s", "fr": "Nous partons en vacances en juillet.", "lu": "Mir fueren am Juli an d'Vakanz.", "g": "futur", "n": "« fueren » garde son n devant « am » (voyelle) : règle du n."},
+    {"t": "s", "fr": "Je vais réserver un hôtel.", "lu": "Ech wäert en Hotel reservéieren.", "g": "futur"},
+    {"t": "s", "fr": "Il va pleuvoir.", "lu": "Et wäert reenen.", "g": "futur"},
+    {"t": "s", "fr": "Qu'est-ce que tu fais ce soir ?", "lu": "Wat méchs du haut den Owend?", "afr": ["tu fais quoi ce soir"]},
+    {"t": "s", "fr": "Je veux voyager en Pologne.", "lu": "Ech wëll a Polen reesen.", "g": "modal"},
+    {"t": "s", "fr": "L'année prochaine, je veux parler luxembourgeois.", "lu": "D'nächst Joer wëll ech Lëtzebuergesch schwätzen.", "g": "modal", "afr": ["l'an prochain je veux parler luxembourgeois"]},
+    {"t": "s", "fr": "On se voit bientôt !", "lu": "Mir gesinn eis geschwënn!", "g": "eifel", "afr": ["a bientot"]},
+    {"t": "s", "fr": "Je vais rester à la maison.", "lu": "Ech bleiwen doheem.", "g": "futur", "afr": ["je reste a la maison"]},
+    {"t": "s", "fr": "Quand est-ce que tu pars ?", "lu": "Wéini fiers du fort?", "g": "part", "afr": ["tu pars quand"]}
+   ]},
+   {"id": "T24", "commune": "Réiden", "commune_fr": "Redange", "carte": [34, 132], "theme": "Donner son avis, comparer", "items": [
+    {"t": "w", "fr": "plus grand", "lu": "méi grouss", "g": "comparatif"},
+    {"t": "w", "fr": "mieux / meilleur", "lu": "besser", "g": "comparatif", "afr": ["mieux", "meilleur"]},
+    {"t": "w", "fr": "le meilleur", "lu": "am beschten", "g": "comparatif"},
+    {"t": "w", "fr": "intéressant", "lu": "interessant"},
+    {"t": "w", "fr": "ennuyeux", "lu": "langweileg"},
+    {"t": "w", "fr": "rapide", "lu": "séier"},
+    {"t": "s", "fr": "Je trouve ça bien.", "lu": "Ech fannen dat gutt.", "afr": ["je trouve cela bien"]},
+    {"t": "s", "fr": "À mon avis, c'est trop cher.", "lu": "Menger Meenung no ass dat ze deier.", "g": "v2", "afr": ["a mon avis c'est trop cher"]},
+    {"t": "s", "fr": "Je pense que c'est une bonne idée.", "lu": "Ech mengen, datt dat eng gutt Iddi ass.", "g": "datt"},
+    {"t": "s", "fr": "Je suis d'accord.", "lu": "Ech sinn d'accord.", "g": "eifel"},
+    {"t": "s", "fr": "Je ne suis pas d'accord.", "lu": "Ech sinn net d'accord.", "g": "neg"},
+    {"t": "s", "fr": "Le Luxembourg est plus petit que la France.", "lu": "Lëtzebuerg ass méi kleng wéi Frankräich.", "g": "comparatif", "afr": ["le luxembourg est plus petit que la france"]},
+    {"t": "s", "fr": "Le train est plus rapide que le bus.", "lu": "Den Zuch ass méi séier wéi de Bus.", "g": "comparatif"},
+    {"t": "s", "fr": "Je préfère le thé.", "lu": "Ech drénke léiwer Téi.", "g": "comparatif", "afr": ["je prefere boire du the"]},
+    {"t": "s", "fr": "Je ne viens pas, parce que je suis malade.", "lu": "Ech kommen net, well ech krank sinn.", "g": "datt", "afr": ["je ne viens pas parce que je suis malade"]},
+    {"t": "s", "fr": "C'est vraiment intéressant.", "lu": "Dat ass wierklech interessant."}
+   ]}
+  ]},
+  {"id": "sauer", "nom": "Sauer an Our", "sous_titre": "Se débrouiller partout", "niveau": "A2", "couleur": "#12867f", "lecons": [
+   {"id": "T25", "commune": "Esch-Sauer", "commune_fr": "Esch-sur-Sûre", "carte": [38, 104], "theme": "Émotions et état", "items": [
+    {"t": "w", "fr": "fatigué", "lu": "midd"},
+    {"t": "w", "fr": "content", "lu": "frou"},
+    {"t": "w", "fr": "triste", "lu": "traureg"},
+    {"t": "w", "fr": "stressé", "lu": "gestresst"},
+    {"t": "w", "fr": "la faim", "lu": "den Honger", "g": "art"},
+    {"t": "w", "fr": "la soif", "lu": "den Duuscht", "g": "art"},
+    {"t": "s", "fr": "Je suis fatigué.", "lu": "Ech si midd.", "g": "sinn", "afr": ["je suis fatiguee"]},
+    {"t": "s", "fr": "J'ai faim.", "lu": "Ech hunn Honger.", "g": "eifel", "n": "« hunn » garde son n devant h : règle du n."},
+    {"t": "s", "fr": "J'ai soif.", "lu": "Ech hunn Duuscht.", "g": "eifel"},
+    {"t": "s", "fr": "Je suis content de te voir.", "lu": "Ech si frou, dech ze gesinn.", "g": "sinn", "afr": ["je suis contente de te voir"]},
+    {"t": "s", "fr": "Je suis désolé.", "lu": "Et deet mir leed.", "afr": ["je suis desolee", "desole"]},
+    {"t": "s", "fr": "Ce n'est pas grave.", "lu": "Dat mécht näischt.", "afr": ["c'est pas grave"]},
+    {"t": "s", "fr": "Ça m'énerve.", "lu": "Dat geet mir op d'Nerven.", "afr": ["ca m'enerve"]},
+    {"t": "s", "fr": "Tu as l'air fatigué.", "lu": "Du gesäis midd aus.", "g": "part", "afr": ["tu as l'air fatiguee"]},
+    {"t": "s", "fr": "J'ai peur.", "lu": "Ech hunn Angscht.", "g": "eifel"},
+    {"t": "s", "fr": "Je suis stressé à cause du travail.", "lu": "Ech si gestresst wéinst der Aarbecht.", "g": "sinn", "afr": ["je suis stresse a cause du travail"]},
+    {"t": "s", "fr": "Ça va mieux ?", "lu": "Geet et besser?", "afr": ["ca va mieux"]}
+   ]},
+   {"id": "T26", "commune": "Veianen", "commune_fr": "Vianden", "carte": [114, 78], "theme": "Demander son chemin", "items": [
+    {"t": "w", "fr": "à droite", "lu": "riets"},
+    {"t": "w", "fr": "à gauche", "lu": "lénks"},
+    {"t": "w", "fr": "tout droit", "lu": "riichtaus"},
+    {"t": "w", "fr": "loin", "lu": "wäit"},
+    {"t": "w", "fr": "la rue", "lu": "d'Strooss", "g": "art"},
+    {"t": "w", "fr": "le château", "lu": "d'Schlass", "g": "art", "n": "Le château de Vianden est l'un des plus beaux d'Europe : bon prétexte pour pratiquer."},
+    {"t": "w", "fr": "la poste", "lu": "d'Post", "g": "art"},
+    {"t": "s", "fr": "Excusez-moi, où est le château ?", "lu": "Entschëllegt, wou ass d'Schlass?", "afr": ["excusez-moi ou est le chateau"]},
+    {"t": "s", "fr": "C'est loin ?", "lu": "Ass et wäit?", "afr": ["c'est loin"]},
+    {"t": "s", "fr": "Allez tout droit.", "lu": "Gitt riichtaus.", "g": "imper", "afr": ["continuez tout droit"]},
+    {"t": "s", "fr": "Prenez la deuxième rue à gauche.", "lu": "Huelt déi zweet Strooss lénks.", "g": "imper"},
+    {"t": "s", "fr": "C'est à cinq minutes à pied.", "lu": "Et ass fënnef Minutten zu Fouss.", "afr": ["c'est a 5 minutes a pied"]},
+    {"t": "s", "fr": "Je me suis perdu.", "lu": "Ech hu mech verlaf.", "g": "passe", "v": 1, "afr": ["je me suis perdue"]},
+    {"t": "s", "fr": "La gare est à côté de la poste.", "lu": "D'Gare ass nieft der Post.", "g": "dativ"},
+    {"t": "s", "fr": "Où est l'arrêt de bus le plus proche ?", "lu": "Wou ass déi nächst Bushaltestell?", "afr": ["ou est l'arret de bus le plus proche"]},
+    {"t": "s", "fr": "Vous pouvez me le montrer sur la carte ?", "lu": "Kënnt Dir mir dat op der Kaart weisen?", "g": "modal", "afr": ["pouvez-vous me montrer sur la carte"]}
+   ]},
+   {"id": "T27", "commune": "Housen", "commune_fr": "Hosingen", "carte": [92, 62], "theme": "Invitations et fêtes", "items": [
+    {"t": "w", "fr": "la fête", "lu": "d'Fest", "g": "art"},
+    {"t": "w", "fr": "l'anniversaire", "lu": "de Gebuertsdag", "g": "art"},
+    {"t": "w", "fr": "le cadeau", "lu": "de Kaddo", "g": "art"},
+    {"t": "w", "fr": "Noël", "lu": "Chrëschtdag"},
+    {"t": "w", "fr": "l'invitation", "lu": "d'Invitatioun", "g": "art"},
+    {"t": "w", "fr": "l'envie", "lu": "d'Loscht", "g": "art"},
+    {"t": "s", "fr": "Tu as envie de venir ?", "lu": "Hues du Loscht ze kommen?", "afr": ["as-tu envie de venir"]},
+    {"t": "s", "fr": "Avec plaisir !", "lu": "Gären!"},
+    {"t": "s", "fr": "Dommage, je ne peux pas.", "lu": "Schued, ech kann net.", "g": "modal"},
+    {"t": "s", "fr": "Joyeux anniversaire !", "lu": "Alles Guddes fir de Gebuertsdag!", "afr": ["bon anniversaire"]},
+    {"t": "s", "fr": "Joyeux Noël !", "lu": "Schéi Chrëschtdeeg!", "afr": ["joyeux noel"]},
+    {"t": "s", "fr": "Bonne année !", "lu": "E gutt neit Joer!", "afr": ["bonne annee"]},
+    {"t": "s", "fr": "Je t'invite à mon anniversaire.", "lu": "Ech invitéieren dech op mäi Gebuertsdag.", "g": "poss"},
+    {"t": "s", "fr": "Je dois apporter quelque chose ?", "lu": "Soll ech eppes matbréngen?", "g": "modal", "afr": ["j'apporte quelque chose"]},
+    {"t": "s", "fr": "Merci pour l'invitation !", "lu": "Merci fir d'Invitatioun!"},
+    {"t": "s", "fr": "La Schueberfouer commence en août.", "lu": "D'Schueberfouer fänkt am August un.", "g": "part", "n": "La Schueberfouer est la grande fête foraine de Luxembourg-Ville, fin août à début septembre."}
+   ]},
+   {"id": "T28", "commune": "Ëlwen", "commune_fr": "Troisvierges", "carte": [78, 28], "theme": "Raconter sa journée", "items": [
+    {"t": "w", "fr": "le matin", "lu": "moies", "g": "temps"},
+    {"t": "w", "fr": "à midi", "lu": "mëttes", "g": "temps"},
+    {"t": "w", "fr": "le soir", "lu": "owes", "g": "temps"},
+    {"t": "w", "fr": "ensuite", "lu": "duerno"},
+    {"t": "w", "fr": "d'abord", "lu": "fir d'éischt"},
+    {"t": "w", "fr": "se lever", "lu": "opstoen", "g": "part"},
+    {"t": "s", "fr": "Ce matin, je me suis levé à six heures.", "lu": "Haut de Moien sinn ech um sechs Auer opgestan.", "g": "passe", "afr": ["je me suis leve a six heures ce matin"]},
+    {"t": "s", "fr": "Ensuite, j'ai pris le train.", "lu": "Duerno hunn ech den Zuch geholl.", "g": "passe"},
+    {"t": "s", "fr": "Je suis arrivé au travail à huit heures.", "lu": "Ech sinn um aacht Auer op der Aarbecht ukomm.", "g": "passe", "afr": ["je suis arrive au travail a 8 heures"]},
+    {"t": "s", "fr": "À midi, j'ai mangé avec des collègues.", "lu": "Mëttes hunn ech mat Kolleegen giess.", "g": "temps"},
+    {"t": "s", "fr": "L'après-midi, j'avais une réunion.", "lu": "De Mëtteg hat ech eng Reunioun.", "g": "v2", "v": 1},
+    {"t": "s", "fr": "Le soir, j'ai fait du sport.", "lu": "Owes hunn ech Sport gemaach.", "g": "temps"},
+    {"t": "s", "fr": "Je me suis couché à onze heures.", "lu": "Ech sinn um eelef Auer schlofe gaangen.", "g": "passe", "afr": ["je suis alle me coucher a onze heures"]},
+    {"t": "s", "fr": "Qu'est-ce que tu as fait aujourd'hui ?", "lu": "Wat hues du haut gemaach?", "g": "passe", "afr": ["tu as fait quoi aujourd'hui"]},
+    {"t": "s", "fr": "C'était une longue journée.", "lu": "Et war e laangen Dag.", "g": "eifel"},
+    {"t": "s", "fr": "J'étais fatigué.", "lu": "Ech war midd.", "afr": ["j'etais fatiguee"]}
+   ]}
   ]}
  ],
- "communes_a_venir": [
-  {"commune": "Veianen", "commune_fr": "Vianden", "carte": [114, 78]}
- ]
+ "communes_a_venir": []
 }
